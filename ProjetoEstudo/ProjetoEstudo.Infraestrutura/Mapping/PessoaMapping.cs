@@ -18,6 +18,7 @@ namespace ProjetoEstudo.Infraestrutura.Mapping
             builder.Property(p => p.EmailPessoa).IsRequired();
             builder.Property(p => p.Cpf).IsRequired();
             builder.Property(p => p.Telefone).IsRequired();
+            builder.HasOne(p => p.Endereco).WithOne(e => e.Pessoa);
             builder.HasOne(p => p.Loja).WithOne(l => l.Pessoa);
         }
     }

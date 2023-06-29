@@ -12,7 +12,10 @@ namespace ProjetoEstudo.Infraestrutura.Mapping
     {
         public void Configure(EntityTypeBuilder<Pagamento> builder)
         {
-
+            builder.HasKey(pa => pa.IdPagamento);
+            builder.Property(p => p.IdPagamento).IsRequired();
+            builder.Property(p => p.Preco).IsRequired();
+            builder.Property(p => p.Qtde).IsRequired();
         }
     }
 }

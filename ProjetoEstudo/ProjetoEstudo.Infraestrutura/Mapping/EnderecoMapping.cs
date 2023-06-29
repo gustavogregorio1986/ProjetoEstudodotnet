@@ -13,7 +13,7 @@ namespace ProjetoEstudo.Infraestrutura.Mapping
     {
         public void Configure(EntityTypeBuilder<Endereco> builder)
         {
-            builder.HasKey(e => e.IdEndereco);
+            builder.HasKey(e => e.IdEndereco).IsClustered();
             builder.Property(e => e.IdEndereco).IsRequired();
             builder.Property(e => e.Logradouro).IsRequired();
             builder.Property(e => e.Complemento).IsRequired();
