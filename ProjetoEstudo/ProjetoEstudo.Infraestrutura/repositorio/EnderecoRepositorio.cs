@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoEstudo.Infraestrutura.repositorio.Interface
+namespace ProjetoEstudo.Infraestrutura.repositorio
 {
-    internal class LojaRepositorio
+    internal class EnderecoRepositorio
     {
     }
 }
