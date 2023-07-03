@@ -14,6 +14,11 @@ namespace ProjetoEstudo.Servico.Servico
     {
         private IEnderecoRepositorio enderecoRepostorio;
 
+        public EnderecoServico(IEnderecoRepositorio enderecoRepostorio)
+        {
+            this.enderecoRepostorio = enderecoRepostorio;
+        }
+
         public void Adicionar(EnderecoDTO enderecoDTO)
         {
             enderecoRepostorio.Adicionar(enderecoDTO);

@@ -13,6 +13,12 @@ namespace ProjetoEstudo.Servico.Servico
     {
         private ILojaRepositorio lojaRepositorio;
 
+
+        public LojaServico(ILojaRepositorio lojaRepositorio)
+        {
+            this.lojaRepositorio = lojaRepositorio;
+        }
+
         public void Adicionar(LojaDTO lojaDTO)
         {
             lojaRepositorio.Adicionar(lojaDTO);
