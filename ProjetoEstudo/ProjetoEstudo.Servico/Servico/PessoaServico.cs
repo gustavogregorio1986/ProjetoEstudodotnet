@@ -13,6 +13,11 @@ namespace ProjetoEstudo.Servico.Servico
     {
         private IPessoaRepositorio pessoaRepositorio;
 
+        public PessoaServico(IPessoaRepositorio pessoaRepositorio)
+        {
+            this.pessoaRepositorio = pessoaRepositorio;
+        }
+
         public void Adicionar(PessoaDTO pessoaDTO)
         {
             pessoaRepositorio.Adicionar(pessoaDTO);

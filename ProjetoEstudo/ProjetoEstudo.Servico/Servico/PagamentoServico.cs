@@ -13,6 +13,11 @@ namespace ProjetoEstudo.Servico.Servico
     {
         private readonly IPagamentoRepositorio pagamentoRepositorio;
 
+        public PagamentoServico(IPagamentoRepositorio pagamentoRepositorio)
+        {
+            this.pagamentoRepositorio = pagamentoRepositorio;
+        }
+
         public void Adiciuonar(PagamentoDTO pagamentoDTO)
         {
             pagamentoRepositorio.Adicionar(pagamentoDTO);

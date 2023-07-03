@@ -13,6 +13,11 @@ namespace ProjetoEstudo.Servico.Servico
     {
         private IProdutoRepositorio produtoRepositorio;
 
+        public ProdutoServico(IProdutoRepositorio produtoRepositorio)
+        {
+            this.produtoRepositorio = produtoRepositorio;
+        }
+
         public void Adicionar(ProdutoDTO produtoDTO)
         {
             produtoRepositorio.Adicionar(produtoDTO);
