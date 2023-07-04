@@ -10,11 +10,11 @@ namespace ProjetoEstudo.Controllers
     [ApiController]
     public class PagamentoController : ControllerBase
     {
-        private IPagamentoServico pagamentoServico;
+        private IPagamentoServico _pagamentoServico;
 
         public PagamentoController(IPagamentoServico pagamentoServico)
         {
-            this.pagamentoServico = pagamentoServico;
+            this._pagamentoServico = pagamentoServico;
         }
 
         [HttpPost]
@@ -26,7 +26,7 @@ namespace ProjetoEstudo.Controllers
                  Qtde = pagamentoDTO.Qtde
             };
 
-            pagamentoServico.Adicionar(pagamentoDTO);
+            _pagamentoServico.Adicionar(pagamentoDTO);
 
             return new JsonResult(pagamentoDTO);
         }

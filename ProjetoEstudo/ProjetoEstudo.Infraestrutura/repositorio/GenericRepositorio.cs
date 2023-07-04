@@ -16,6 +16,7 @@ namespace ProjetoEstudo.Infraestrutura.repositorio
         public GenericRepositorio()
         {
             var options = new DbContextOptionsBuilder<ProjetoEstudoContexto>().UseSqlServer("DefaultConnection").Options; 
+            _db = new ProjetoEstudoContexto(options);
         }
 
         public void Adicionar(T entidade)

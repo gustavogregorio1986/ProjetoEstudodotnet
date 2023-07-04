@@ -10,11 +10,11 @@ namespace ProjetoEstudo.Controllers
     [ApiController]
     public class PessoaController : ControllerBase
     {
-        private IPessoaServico pessoaServico;
+        private IPessoaServico _pessoaServico;
 
         public PessoaController(IPessoaServico pessoaServico)
         {
-            this.pessoaServico = pessoaServico;
+            this._pessoaServico = pessoaServico;
         }
 
         [HttpPost]
@@ -28,7 +28,7 @@ namespace ProjetoEstudo.Controllers
                  Telefone = pessoaDTO.Telefone
             };
 
-            pessoaServico.Adicionar(pessoaDTO);
+            _pessoaServico.Adicionar(pessoaDTO);
 
             return new JsonResult(pessoaDTO);
         }

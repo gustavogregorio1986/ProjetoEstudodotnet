@@ -10,11 +10,11 @@ namespace ProjetoEstudo.Controllers
     [ApiController]
     public class EnderecoController : ControllerBase
     {
-        private IEnderecoServico enderecoServico;
+        private IEnderecoServico _enderecoServico;
 
         public EnderecoController(IEnderecoServico enderecoServico)
         {
-            this.enderecoServico = enderecoServico;
+            this._enderecoServico = enderecoServico;
         }
 
         [HttpPost]
@@ -30,7 +30,7 @@ namespace ProjetoEstudo.Controllers
                 Cep = enderecoDTO.Cep
             };
 
-            enderecoServico.Adicionar(enderecoDTO);
+            _enderecoServico.Adicionar(enderecoDTO);
 
             return new JsonResult(enderecoDTO);
         }
