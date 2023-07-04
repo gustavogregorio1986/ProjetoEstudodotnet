@@ -17,6 +17,7 @@ namespace ProjetoEstudo.Controllers
             this.pagamentoServico = pagamentoServico;
         }
 
+        [HttpPost]
         public JsonResult CadastrarPagamento([FromBody] PagamentoDTO pagamentoDTO)
         {
             var pagamento = new Pagamento()
