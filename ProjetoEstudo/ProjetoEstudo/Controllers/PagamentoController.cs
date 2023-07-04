@@ -20,6 +20,7 @@ namespace ProjetoEstudo.Controllers
         [HttpPost]
         public JsonResult CadastrarPagamento([FromBody] PagamentoDTO pagamentoDTO)
         {
+            pagamentoDTO = new PagamentoDTO();
             var pagamento = new Pagamento()
             { 
                  Preco = pagamentoDTO.Preco,

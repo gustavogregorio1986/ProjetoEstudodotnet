@@ -20,8 +20,10 @@ namespace ProjetoEstudo.Controllers
         [HttpPost]
         public JsonResult CadastrarEndereco([FromBody] EnderecoDTO enderecoDTO)
         {
+            enderecoDTO = new EnderecoDTO();
             var endereco = new Endereco()
             {
+                
                 Logradouro = enderecoDTO.Logradouro,
                 Complemento = enderecoDTO.Complemento,
                 Bairro = enderecoDTO.Bairro,
