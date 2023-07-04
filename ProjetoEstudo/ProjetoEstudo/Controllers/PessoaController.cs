@@ -28,6 +28,7 @@ namespace ProjetoEstudo.Controllers
                  Telefone = pessoaDTO.Telefone
             };
 
+            pessoaServico.Adicionar(pessoaDTO);
 
             return new JsonResult(pessoaDTO);
         }

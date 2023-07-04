@@ -25,6 +25,8 @@ namespace ProjetoEstudo.Controllers
                  Qtde = pagamentoDTO.Qtde
             };
 
+            pagamentoServico.Adicionar(pagamentoDTO);
+
             return new JsonResult(pagamentoDTO);
         }
     }

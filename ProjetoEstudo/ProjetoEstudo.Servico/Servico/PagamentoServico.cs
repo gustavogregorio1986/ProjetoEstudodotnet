@@ -18,7 +18,7 @@ namespace ProjetoEstudo.Servico.Servico
             this.pagamentoRepositorio = pagamentoRepositorio;
         }
 
-        public void Adiciuonar(PagamentoDTO pagamentoDTO)
+        public void Adicionar(PagamentoDTO pagamentoDTO)
         {
             pagamentoRepositorio.Adicionar(pagamentoDTO);
         }

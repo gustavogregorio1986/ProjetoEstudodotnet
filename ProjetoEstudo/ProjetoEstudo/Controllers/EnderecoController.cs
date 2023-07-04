@@ -29,6 +29,7 @@ namespace ProjetoEstudo.Controllers
                 Cep = enderecoDTO.Cep
             };
 
+            enderecoServico.Adicionar(enderecoDTO);
 
             return new JsonResult(enderecoDTO);
         }

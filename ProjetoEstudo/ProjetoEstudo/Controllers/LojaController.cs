@@ -27,7 +27,9 @@ namespace ProjetoEstudo.Controllers
                 Cnpj = lojaDTO.Cnpj
             };
 
-            return new JsonResult(enderecoDTO);
+            lojaServico.Adicionar(lojaDTO);
+
+            return new JsonResult(lojaDTO);
         }
     }
 }
