@@ -9,6 +9,6 @@ namespace ProjetoEstudo.Servico.Servico.Interface
 {
     public interface IProdutoServico
     {
-        void Adicionar(ProdutoDTO produtoDTO)
+        void Adicionar(ProdutoDTO produtoDTO);
     }
 }

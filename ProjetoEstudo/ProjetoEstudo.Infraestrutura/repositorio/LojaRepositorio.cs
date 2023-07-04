@@ -1,4 +1,5 @@
 ﻿using PorjetoEstudo.Dominio.Dominio;
+using ProjetoEstudo.Infraestrutura.DTO;
 using ProjetoEstudo.Infraestrutura.repositorio.Interface;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstudo.Infraestrutura.repositorio
 {
-    public class LojaRepositorio : GenericRepositorio<Loja>, ILojaRepositorio
+    public class LojaRepositorio : GenericRepositorio<LojaDTO>, ILojaRepositorio
     {
+        
     }
 }
