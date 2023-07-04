@@ -10,12 +10,12 @@ namespace ProjetoEstudo.Controllers
     [ApiController]
     public class LojaController : ControllerBase
     {
-        private ILojaServico lojaServico;
+        private ILojaServico _lojaServico;
 
 
         public LojaController(ILojaServico lojaServico)
         {
-            this.lojaServico = lojaServico;
+            this._lojaServico = lojaServico;
         }
 
         [HttpPost]
@@ -27,7 +27,7 @@ namespace ProjetoEstudo.Controllers
                 Cnpj = lojaDTO.Cnpj
             };
 
-            lojaServico.Adicionar(lojaDTO);
+            _lojaServico.Adicionar(lojaDTO);
 
             return new JsonResult(lojaDTO);
         }

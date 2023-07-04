@@ -9,6 +9,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ProjetoEstudo.Infraestrutura.Contexto;
+using ProjetoEstudo.Infraestrutura.repositorio;
+using ProjetoEstudo.Infraestrutura.repositorio.Interface;
+using ProjetoEstudo.Servico.Servico;
+using ProjetoEstudo.Servico.Servico.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +32,14 @@ namespace ProjetoEstudo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IPessoaServico, PessoaServico>();
+            services.AddScoped<IEnderecoServico, EnderecoServico>();
+            services.AddScoped<IProdutoServico, ProdutoServico>();
+            services.AddScoped<IPagamentoServico, PagamentoServico>();
+            services.AddScoped<IPessoaRepositorio, PessoaRepositorio>();
+            services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddScoped<IPagamentoRepositorio, PagamentoRepositorio>();
             services.AddDbContext<ProjetoEstudoContexto>(options => options.UseSqlServer("DefaultConnection"));
             services.AddControllers();
             services.AddSwaggerGen(c =>

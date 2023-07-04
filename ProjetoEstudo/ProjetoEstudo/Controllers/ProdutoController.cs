@@ -10,11 +10,11 @@ namespace ProjetoEstudo.Controllers
     [ApiController]
     public class ProdutoController : ControllerBase
     {
-        private IProdutoServico produtoServico;
+        private IProdutoServico _produtoServico;
 
         public ProdutoController(IProdutoServico produtoServico)
         {
-            this.produtoServico = produtoServico;
+            this._produtoServico = produtoServico;
         }
 
         [HttpPost]
@@ -26,7 +26,7 @@ namespace ProjetoEstudo.Controllers
                 Descricao = produtoDTO.Descricao
             };
 
-            produtoServico.Adicionar(produtoDTO);
+            _produtoServico.Adicionar(produtoDTO);
 
             return new JsonResult(produtoDTO);
         }
