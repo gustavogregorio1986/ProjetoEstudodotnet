@@ -9,6 +9,6 @@ namespace ProjetoEstudo.Servico.Servico.Interface
 {
     public interface IPagamentoServico
     {
-        void Adiciuonar(PagamentoDTO pagamentoDTO);
+        void Adicionar(PagamentoDTO pagamentoDTO);
     }
 }
