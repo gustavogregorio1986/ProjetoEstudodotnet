@@ -20,6 +20,7 @@ namespace ProjetoEstudo.Controllers
         [HttpPost]
         public JsonResult CadastrarPessoa([FromBody] PessoaDTO pessoaDTO)
         {
+            pessoaDTO = new PessoaDTO();
             var pessoa = new Pessoa()
             { 
                  NomePessoa = pessoaDTO.NomePessoa,

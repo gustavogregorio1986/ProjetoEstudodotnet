@@ -21,6 +21,7 @@ namespace ProjetoEstudo.Controllers
         [HttpPost]
         public JsonResult CadastrarLoja([FromBody] LojaDTO lojaDTO)
         {
+            lojaDTO = new LojaDTO();
             var loja = new Loja()
             { 
                 NomeLoja = lojaDTO.NomeLoja,
