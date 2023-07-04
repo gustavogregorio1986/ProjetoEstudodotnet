@@ -17,6 +17,7 @@ namespace ProjetoEstudo.Controllers
             this.produtoServico = produtoServico;
         }
 
+        [HttpPost]
         public JsonResult CadastraProduto([FromBody] ProdutoDTO produtoDTO)
         {
             var produto = new Produto()

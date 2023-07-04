@@ -17,6 +17,7 @@ namespace ProjetoEstudo.Controllers
             this.enderecoServico = enderecoServico;
         }
 
+        [HttpPost]
         public JsonResult CadastrarEndereco([FromBody] EnderecoDTO enderecoDTO)
         {
             var endereco = new Endereco()
